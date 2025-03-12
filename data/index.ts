@@ -1,9 +1,41 @@
+import { Transaction } from "@sentry/nextjs";
+
 export const navItems = [
-  { name: "About", link: "#about" },
-  { name: "Projects", link: "#projects" },
-  { name: "Testimonials", link: "#testimonials" },
-  { name: "Contact", link: "#contact" },
+  { 
+    name: "About", 
+    link: "#about",
+    onClick: (e: React.MouseEvent) => {
+      e.preventDefault();
+      document.querySelector('#about')?.scrollIntoView({ behavior: 'smooth' });
+    }
+  },
+  { 
+    name: "Projects", 
+    link: "#projects",
+    onClick: (e: React.MouseEvent) => {
+      e.preventDefault();
+      document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' });
+    }
+  },
+  { 
+    name: "Testimonials", 
+    link: "#testimonials",
+    onClick: (e: React.MouseEvent) => {
+      e.preventDefault();
+      document.querySelector('#testimonials')?.scrollIntoView({ behavior: 'smooth' });
+    }
+  },
+  { 
+    name: "Contact", 
+    link: "#contact",
+    onClick: (e: React.MouseEvent) => {
+      e.preventDefault();
+      document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
+    }
+  },
 ];
+
+
 
 export const gridItems = [
   {
@@ -49,7 +81,7 @@ export const gridItems = [
 
   {
     id: 5,
-    title: "Currently building a JS Animation library",
+    title: "Currently building a Healthcare Management System",
     description: "The Inside Scoop",
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
@@ -107,33 +139,33 @@ export const projects = [
 export const testimonials = [
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+      "Collaborating with Aadi was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Aadi's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Aadi is the ideal partner.",
     name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+    title: "CEO",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+      "Collaborating with Aadi was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Aadi's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Aadi is the ideal partner.",
     name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+    title: "CEO",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+      "Collaborating with Aadi was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Aadi's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Aadi is the ideal partner.",
     name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+    title: "CEO",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+      "Collaborating with Aadi was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Aadi's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Aadi is the ideal partner.",
     name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+    title: "CEO",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+      "Collaborating with Aadi was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Aadi's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Aadi is the ideal partner.",
     name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+    title: "CEO",
   },
 ];
 
@@ -174,28 +206,28 @@ export const workExperience = [
   {
     id: 1,
     title: "Frontend Engineer Intern",
-    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+    desc: "NULL.",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
   {
     id: 2,
     title: "Mobile App Dev - JSM Tech",
-    desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
+    desc: "NULL",
     className: "md:col-span-2", // change to md:col-span-2
     thumbnail: "/exp2.svg",
   },
   {
     id: 3,
     title: "Freelance App Dev Project",
-    desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
+    desc: "NULL",
     className: "md:col-span-2", // change to md:col-span-2
     thumbnail: "/exp3.svg",
   },
   {
     id: 4,
     title: "Lead Frontend Developer",
-    desc: "Developed and maintained user-facing features using modern frontend technologies.",
+    desc: "NULL.",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
   },
@@ -205,13 +237,23 @@ export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
+    href: "https://google.com",
+    target: "_blank",
+    rel: "noopener noreferrer"
   },
   {
     id: 2,
     img: "/twit.svg",
+    href: "https://google.com",
+    target: "_blank",
+    rel: "noopener noreferrer"
   },
   {
     id: 3,
     img: "/link.svg",
+    href: "https://google.com",
+    target: "_blank",
+    rel: "noopener noreferrer"
   },
 ];
+
