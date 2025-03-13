@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
-import YourComponent from '../components/YourComponent';
 
-const Page = () => {
+const AnotherComponent = () => {
     useEffect(() => {
         // This code will only run on the client side
         if (typeof document !== 'undefined') {
@@ -14,10 +13,9 @@ const Page = () => {
 
     return (
         <div>
-            <YourComponent />
-            {/* Other components */}
+            {/* Your JSX here */}
         </div>
     );
 };
 
-export default Page;
+export default AnotherComponent;
